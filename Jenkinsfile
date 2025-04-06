@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'C:\Users\santo\Documents\maven-mvnd-1.0.2-windows-amd64\mvn\bin\mvn --version'
+                powershell '''
+                'C:\Users\santo\Documents\maven-mvnd-1.0.2-windows-amd64\mvn\bin\mvn --version'
+                '''
             }
         }
     }
