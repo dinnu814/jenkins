@@ -15,5 +15,12 @@ pipeline {
                  '''
                 }
         }
+        stage('list the images') {
+            steps {
+                powershell '''
+                 'docker images'
+                 '''
+                }
+        }
     }
 }
