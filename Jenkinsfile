@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('fetch code from git') {
             steps {
-                 git 'https://github.com/dinnu814/kubernetes.git'
+                powershell '''
+                 'git clone https://github.com/dinnu814/kubernetes.git'
+                 '''
                 }
         }
     }
