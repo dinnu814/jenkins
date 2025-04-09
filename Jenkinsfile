@@ -8,5 +8,12 @@ pipeline {
                  '''
                 }
         }
+        stage('build docker image') {
+            steps {
+                powershell '''
+                 'docker build ./docker-ws/Dockerfile -t apache'
+                 '''
+                }
+        }
     }
 }
